@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4070f4;
+}
+.container{
+    background-color: #fff;
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.container header{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+}
+.container header::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    height: 3px;
+    left: 0;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #4070f4;
+}
+.container form{
+    position: relative;
+    min-height: 490px;
+    background-color: #fff;
+    margin-top: 16px;
+}
+.container form .details{
+    margin-top: 30px;
+}
+.container form .details.ID{
+    margin-top: 10px;
+}
+.container form .title{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+.container form .feilds{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .feilds .input-feild{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3 - 15px);
+    margin: 4px 0;
+}
+.input-feild label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-feild input{
+    height: 42px;
+    margin: 10px 0;
+    padding: 0 15px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+.input-feild input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-feild input[type="date"]{
+    color: #707070;
+    padding: 0 45px;
+}
+.input-feild input[type="date"]:valid{
+    color: #333;
+}
+.container form button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px;
+    background-color: #265df2;
+    transition: all;
+}
+@media(max-width: 700px){
+    .feilds{
+       flex-direction: column; 
+    }
+    .feilds .input-feild{
+        align-items: center;
+    }
+    .input-feild input{
+        height: 50px;
+        margin: 10px 0;
+        padding: 0 55px;
+        outline: none;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        margin-right: 60%;
+    }
+    .input-feild label{
+        font-size: 12px;
+        font-weight: 500;
+        color: #2e2e2e;
+        margin-left: -200%;
+    }
+    .container header{
+        font-size: 35px;
+        font-weight: 600;
+        color: #333;
+    }
+    .container header::before{
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        height: 5px;
+        left: 0;
+        width: 47px;
+        border-radius: 8px;
+        background-color: #4070f4;
+    }
+    .input-feild input[type="date"]{
+        color: #707070;
+        padding: 0 75px;
+    }
+    .container form .title{
+        font-size: 20px;
+        font-weight: 600;
+        font-style: bold;
+        color: #333;
+        margin-top: 10%;
+        margin-bottom: 15px;
+    }
+}
